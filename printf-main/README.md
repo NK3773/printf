@@ -29,12 +29,12 @@ The function has the following conversion specifies:
  you can clone this repository  and use the function on your local machine.
 
 ```bash 
-git clone https://github.com/Abinet508/printf.git
+git clone https://github.com/NK3773/printf.git
 ```
 
 # Usage
 + include the `main.h ` header file on the function for using _printf().
-+ All the files are to be compiled on Ubuntu 14.04 LTS
++ All the files are to be compiled on Ubuntu 20.04 LTS
 ```bash
 Compile your code with `gcc -Wall -Werror -Wextra -pedantic *.c`
 ```
