@@ -1,25 +1,36 @@
 #include "main.h"
+
 /**
- * print_rev - prints a string in reverse
- * @l: argument from _printf
- * @f: pointer to the struct flags that determines if a flag is passed to _printf
- * 
- * Return: length of the printed string
+ * print_reverse - prints a string in reverse order, followed by a new line.
+ * @s: string to be printed in reverse order
+ * Return: number of characters printed
  */
 int print_reverse(char *s)
 {
-    int i = 0, j;
+	int x, y, z, chars_printed = 0;
+	char *str;
 
-    if (!s)
-    {
-        s = "(null)";
-    }
-    while (s[i])
-    {
-        i++;
-    }
-    for (j = i - 1; j >= 0; j--)
-    {
-        _putchar(s[j]);
-    }
+	x = 0;
+	y = 0;
+	z = 0;
+	if (s)
+	{
+		while (*(s + x))
+			x++;
+		str = malloc(sizeof(char) * x);
+		if (str == NULL)
+		{
+			free(str);
+			return (0);
+		}
+		for (y = (x - 1); y >= 0; y--)
+		{
+			*(str + z) = *(s + y);
+			z++;
+		}
+		*(str + x) = '\0';
+		chars_printed = print_string(str);
+		return (chars_printed);
+	}
+	return (0);
 }
